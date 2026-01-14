@@ -30,19 +30,7 @@ const HomePage = () => {
     {
       icon: Bot,
       title: "Artificial Intelligence",
-      description: "We apply cutting-edge AI to create practical solutions that address today’s most complex challenges.",
-      color: "blue",
-    },
-    {
-      icon: Zap,
-      title: "Application Development",
-      description: "From web to mobile to desktop, we build applications that are scalable, user-friendly, and performance-driven.",
-      color: "blue",
-    },
-    {
-      icon: Globe,
-      title: "Digital Transformation",
-      description: "We help businesses modernize through websites, social platforms, design, logistics, and marketing that connect and convert.",
+      description: "We apply cutting-edge AI to create practical solutions that address today's most complex challenges.",
       color: "blue",
     },
     {
@@ -55,6 +43,18 @@ const HomePage = () => {
       icon: Rocket,
       title: "Product Prototyping",
       description: "We turn bold ideas into working prototypes quickly, helping you validate concepts and accelerate innovation.",
+      color: "blue",
+    },
+    {
+      icon: Zap,
+      title: "Application Development",
+      description: "From web to mobile to desktop, we build applications that are scalable, user-friendly, and performance-driven.",
+      color: "blue",
+    },
+    {
+      icon: Globe,
+      title: "Digital Transformation",
+      description: "We help businesses modernize through websites, social platforms, design, logistics, and marketing that connect and convert.",
       color: "blue",
     },
     {
@@ -95,7 +95,7 @@ const HomePage = () => {
                   transition={{ duration: 0.8 }}
                   className="text-5xl lg:text-6xl font-bold leading-tight mb-6"
                 >
-                  <span className="gradient-text">Powering The Future</span>
+                  <span className="gradient-text">Engineering The Future</span>
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, x: -50 }}
@@ -179,7 +179,7 @@ const HomePage = () => {
                 Our <span className="gradient-text">Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your digital transformation
+                Comprehensive technology solutions designed to accelerate products to market
               </p>
             </motion.div>
             
@@ -210,7 +210,7 @@ const HomePage = () => {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies already building the future with our technology
+                Join us in building the future with our technology
               </p>
               <Link to="/about">
               <Button 
