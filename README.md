@@ -1,18 +1,18 @@
 # VectaShield.com Website
 
-Official homepage for VectaShield - Powering The Future through engineering excellence in the era of Artificial Intelligence.
+Official homepage for VectaShield - Powering The Future through engineering excellence in defense technology and Artificial Intelligence.
 
 ## About
-VectaShield is a technology company specializing in AI solutions, application development, digital transformation, systems integration, product prototyping, and cloud engineering. This website serves as our professional landing page and central hub for connecting with clients, partners, and the tech community.
+VectaShield is a defense technology company specializing in defense solutions, defense technologies, digital transformation, and product engineering. This website serves as our professional landing page and central hub for connecting with clients, partners, and the defense tech community.
 
 ## Tech Stack
-Built by AI-powered engineers, this site leverages:
+Built with modern web technologies:
 - React - Component-based UI framework
 - Vite - Next-generation frontend tooling
 - Tailwind CSS - Utility-first CSS framework
 - Framer Motion - Animation library
 - Docker - Containerization
-- GitHub Actions - CI/CD pipeline
+- GitHub Actions - Automated CI/CD pipeline
 - Hostinger - Web hosting
 
 ## Social Media & Contact
@@ -28,6 +28,9 @@ Built by AI-powered engineers, this site leverages:
 
 ### Getting Started
 ```bash
+# Navigate to src directory
+cd src
+
 # Install dependencies
 npm install
 
@@ -41,36 +44,24 @@ npm run build
 npm run preview
 ```
 
-### Deployment
+## Deployment
 
-This project uses automated GitHub Actions deployment with a `deploy` branch. See the deployment documentation:
+**Status**: ✅ Fully automated deployment is configured and working!
 
-- **[DEPLOYMENT_SETUP.md](DEPLOYMENT_SETUP.md)** - Complete deployment setup guide
-- **[DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)** - Quick setup checklist
+Every push to the `main` branch automatically:
+1. Triggers GitHub Actions workflow
+2. Builds the React application in Docker
+3. Deploys built files to the `deploy` branch
+4. Hostinger pulls from `deploy` branch and serves the site
 
-**Quick Setup:**
-1. Create `deploy` branch: `git checkout --orphan deploy && git rm -rf . && echo "# Deploy Branch" > README.md && git add README.md && git commit -m "Initialize deploy branch" && git push origin deploy && git checkout main`
-2. Push to `main` branch - automatic deployment will trigger!
-3. Configure Hostinger to pull from the `deploy` branch
+**To deploy changes**: Simply push to `main` branch
+```bash
+git add .
+git commit -m "Your changes"
+git push origin main
+```
 
-**How it works:** Push to `main` → GitHub Actions builds → Pushes to `deploy` branch → Hostinger deploys
-
-## To-Do List
-- [ ] Set up deployment (see [DEPLOYMENT_SETUP.md](DEPLOYMENT_SETUP.md))
-  - [ ] Create `deploy` branch in this repository
-  - [ ] Enable workflow permissions (Settings → Actions → General)
-  - [ ] Test workflow by pushing to `main`
-  - [ ] Configure Hostinger to pull from `deploy` branch
-- [ ] Create and set up social media accounts
-  - [ ] Instagram: @vectashield_llc
-  - [ ] LinkedIn: company/vectashield
-  - [ ] GitHub organization: VectaShield
-- [ ] Update social media links once accounts are active
-- [ ] Add social media content and branding
-- [ ] Configure custom domain settings (vectashield.com)
-- [ ] Set up SSL certificate on Hostinger
-- [ ] Set up analytics tracking (Google Analytics, etc.)
-- [ ] Add blog/news section (optional)
+The site will be live in ~30-40 seconds.
 
 ## License
 © 2026 VectaShield. All rights reserved.
