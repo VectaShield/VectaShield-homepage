@@ -22,7 +22,7 @@ const Footer = () => {
             <span className="font-semibold text-white mb-4 block">Services</span>
             <div className="space-y-2 text-sm text-gray-400">
               <p>AI Solutions</p>
-              <p>Application Development</p>
+              <p>Defense Technologies</p>
               <p>Digital Transformation</p>
               <p>Product Engineering</p>
             </div>
