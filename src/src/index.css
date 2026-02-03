@@ -44,13 +44,16 @@
     --glow-blue: rgba(0, 124, 240, 0.4);
     --glow-mint: #e55d32;
 
-    --colorPalette1: #fdb209; 
+    --colorPalette1: #fdb209;
     --colorPalette2: #e55d32;
     --colorPalette3: #266bf8;
     --colorPalette4: #22fbfe;
     --colorPalette5: #131522;
     --colorPalette6: #090713;
     --colorPalette7: #050209;
+
+    --accent-primary: #DC143C;
+    --accent-secondary: #BF953F;
 
 
       /* --colorPalette1: #fdb209; 
@@ -156,7 +159,7 @@ body {
 }
 
 .glow-blue {
-  box-shadow: 0 0 30px var(--colorPalette4);
+  box-shadow: 0 0 30px var(--accent-secondary);
 }
 
 .glow-mint {
@@ -171,8 +174,8 @@ body {
 .gradient-text {
   background: linear-gradient(
     120deg,
-    var(--colorPalette2) 20%,
-    var(--colorPalette1) 100%
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 57%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -182,8 +185,8 @@ body {
 .gradient-text-name {
   background: linear-gradient(
     120deg,
-    var(--colorPalette2) 30%,
-    var(--colorPalette1) 100%
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 57%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -264,23 +267,21 @@ body {
   position: relative;
   border: 2px solid transparent;
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              linear-gradient(135deg, var(--electric-blue), var(--mint-green)) border-box;
+              linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) border-box;
 }
 
 .light .neon-border {
    background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, var(--electric-blue), var(--mint-green)) border-box;
+              linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) border-box;
 }
 
 .dark .neon-border {
   background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
               linear-gradient(
       120deg,
-      var(--colorPalette4) 5%,
-      var(--colorPalette3) 20%,
-      var(--colorPalette2) 50%,
-      var(--colorPalette1) 100%
-    ) border-box;;
+      var(--accent-primary) 0%,
+      var(--accent-secondary) 57%
+    ) border-box;
 }
 
 .pulse-glow {
@@ -293,19 +294,19 @@ body {
 
 @keyframes pulse-glow {
   from {
-    box-shadow: 0 0 20px var(--colorPalette2), 0 0 50px var(--colorPalette1);
+    box-shadow: 0 0 20px var(--accent-secondary), 0 0 50px var(--accent-primary);
   }
   to {
-    box-shadow: 0 0 20px var(--colorPalette4), 0 0 30px var(--colorPalette3);
+    box-shadow: 0 0 20px var(--accent-primary), 0 0 30px var(--accent-secondary);
   }
 }
 
 @keyframes pulse-glow-hover {
   from {
-    box-shadow: 0 0 40px var(--colorPalette2), 0 0 100px var(--colorPalette1);
+    box-shadow: 0 0 40px var(--accent-secondary), 0 0 100px var(--accent-primary);
   }
   to {
-    box-shadow: 0 0 40px var(--colorPalette4), 0 0 60px var(--colorPalette3);
+    box-shadow: 0 0 40px var(--accent-primary), 0 0 60px var(--accent-secondary);
   }
 }
 
@@ -315,4 +316,98 @@ body {
     #000000 0%,
     transparent 30%
   )
+}
+
+/* ========================================
+   COLOR PALETTE & BUTTON STYLES
+   ======================================== */
+
+/* Navigation Links */
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-secondary);
+}
+
+.nav-link.active {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Primary Button - Solid gradient background */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 20, 60, 0.4);
+}
+
+/* Secondary Button - Gold accent */
+.btn-secondary {
+  background: var(--accent-secondary);
+  color: #1a1a2e;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(191, 149, 63, 0.4);
+}
+
+/* Outline Button - Transparent with gradient border */
+.btn-outline {
+  background: transparent;
+  color: var(--accent-secondary);
+  border: 2px solid var(--accent-secondary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--accent-secondary);
+  color: #1a1a2e;
+}
+
+/* Ghost Button - Minimal styling */
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent-secondary);
 }

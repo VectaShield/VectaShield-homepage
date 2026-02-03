@@ -2,7 +2,7 @@
 import { React, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Zap, Rocket, Blocks, Bot, Globe, Cpu, Cloud, Flame, Earth, Hexagon } from 'lucide-react';
+import { Rocket, Blocks, Bot, Cpu, Shield, Flame, Earth, Hexagon, Lock, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/use-toast';
 import FloatingElement from '@/components/FloatingElement';
@@ -27,40 +27,42 @@ const GradientIcon = ({ Icon, from, via1, via2, to, ...props }) => {
 
 const HomePage = () => {
   const services = [
+    // Top Row
     {
       icon: Bot,
       title: "Artificial Intelligence",
-      description: "We apply cutting-edge AI to create practical solutions that address today's most complex challenges.",
+      description: "Deploying advanced AI and machine learning solutions for mission-critical defense applications, predictive analytics, and autonomous systems.",
       color: "blue",
     },
     {
-      icon: Blocks,
-      title: "Systems Integration",
-      description: "Our team bridges hardware, software, and data systems into seamless, reliable workflows that just work.",
+      icon: Shield,
+      title: "Defense Engineering",
+      description: "Engineering robust defense systems with expertise in weapons integration, tactical communications, hardened infrastructure, and more.",
       color: "blue",
     },
     {
       icon: Rocket,
-      title: "Product Prototyping",
-      description: "We turn bold ideas into working prototypes quickly, helping you validate concepts and accelerate innovation.",
+      title: "Project Prototyping",
+      description: "Rapid prototyping and proof-of-concept development to accelerate defense innovation from concept to operational capability.",
+      color: "blue",
+    },
+    // Bottom Row
+    {
+      icon: Blocks,
+      title: "Systems Integration",
+      description: "Seamlessly integrating complex hardware, software, and data systems across classified and unclassified environments.",
       color: "blue",
     },
     {
-      icon: Zap,
-      title: "Application Development",
-      description: "From web to mobile to desktop, we build applications that are scalable, user-friendly, and performance-driven.",
+      icon: Lock,
+      title: "Secure Development",
+      description: "Building mission-critical applications with intelligence community standards, secure fielding environments, and zero-trust architectures.",
       color: "blue",
     },
     {
-      icon: Globe,
-      title: "Digital Transformation",
-      description: "We help businesses modernize through websites, social platforms, design, logistics, and marketing that connect and convert.",
-      color: "blue",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Engineering",
-      description: "We design and manage databases, cloud platforms, servers, and hosting for secure, scalable, and efficient operations.",
+      icon: RefreshCw,
+      title: "Modernization",
+      description: "Replacing aging defense systems with next-generation solutions through technology refresh, platform migration, and modern capability insertion.",
       color: "colorPalette1",
     },
   ];
@@ -112,16 +114,16 @@ const HomePage = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="flex flex-col sm:flex-row gap-4"
                 >
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="neon-border text-white font-semibold px-8 py-4 pulse-glow"
                     onClick={toContact}
                   >
                   <Flame className="w-5 h-5 mr-2" />
                     Forge Your Solution
                   </Button>
-                  <Button  
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white hover:bg-slate-200 text-black border-electric-blue px-8 py-4"
                     onClick={scrollToServices}
                   >
@@ -145,7 +147,7 @@ const HomePage = () => {
                 </FloatingElement>
                 
                 <FloatingElement delay={1.0} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-electric-blue/20 to-mint-green/20 flex items-center justify-center glow-blue">
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-accent-secondary/20 to-accent-secondary/30 flex items-center justify-center glow-blue">
                     <img alt="Futuristic holographic interface with glowing data streams" className="w-48 h-48 rounded-full object-cover" src="images/art/forge.webp" />
                   </div>
                 </FloatingElement>
@@ -213,8 +215,8 @@ const HomePage = () => {
                 Join us in building the future with our technology
               </p>
               <Link to="/about">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="neon-border text-white font-semibold px-12 py-4 pulse-glow"
               >
                 <Rocket className="w-5 h-5 mr-2" />

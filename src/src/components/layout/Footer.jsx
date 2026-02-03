@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img className="w-8 h-8" src="svg/logo.svg"/>
+            <div className="flex items-center gap-4 mb-4">
+              <img className="w-16 h-16 object-contain" src="images/logo.png"/>
               <span className="text-xl font-bold gradient-text">VectaShield</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -21,10 +21,10 @@ const Footer = () => {
           <div>
             <span className="font-semibold text-white mb-4 block">Services</span>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>Defense Solutions</p>
-              <p>Defense Technologies</p>
-              <p>Digital Transformation</p>
-              <p>Product Engineering</p>
+              <p>Artificial Intelligence</p>
+              <p>Defense Engineering</p>
+              <p>Secure Development</p>
+              <p>Modernization</p>
             </div>
           </div>
           

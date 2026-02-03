@@ -35,8 +35,8 @@ const Header = () => {
       className="relative z-20 p-6"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img className="w-10 h-10" src="svg/logo.svg"/>
+        <Link to="/" className="flex items-center gap-4">
+          <img className="w-28 h-28 object-contain" src="images/logo.png"/>
           <span className="text-2xl font-bold gradient-text-name">VectaShield</span>
         </Link>
         
@@ -53,7 +53,7 @@ const Header = () => {
                 {item.name}
             </NavLink>
           ))}
-          <Button 
+          <Button
             className="neon-border bg-transparent text-white"
             onClick={handleClick}
           >
@@ -80,7 +80,7 @@ const Header = () => {
                 </DropdownMenuItem>
               ))}
                <DropdownMenuItem>
-                 <Button 
+                 <Button
                     className="w-full neon-border bg-transparent text-white"
                     onClick={handleClick}
                   >

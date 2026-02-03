@@ -13,7 +13,7 @@ const ServiceCard = ({ icon: Icon, title, description, color, delay }) => {
       style={{ animationDelay: `${delay * 0.5}s` }}
     >
       <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-colorPalette5 glow-blue`}>
-        <Icon className="w-6 h-6 text-colorPalette4" />
+        <Icon className="w-6 h-6 text-accent-secondary" />
       </div>
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-gray-400 text-sm leading-relaxed">{description}</p>

@@ -57,6 +57,10 @@ module.exports = {
 				colorPalette5: "var(--colorPalette5)",
 				colorPalette6: "var(--colorPalette6)",
 				colorPalette7: "var(--colorPalette7)",
+				'accent-primary': "var(--accent-primary)",
+				'accent-secondary': "var(--accent-secondary)",
+				'electric-blue': "var(--electric-blue)",
+				'mint-green': "var(--mint-green)",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
